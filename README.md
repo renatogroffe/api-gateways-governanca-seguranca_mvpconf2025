@@ -3,7 +3,7 @@ Conteúdos da apresentação "Governança e Segurança em APIs REST: tirando o m
 
 ---
 
-## Subscription Key
+## Rate Limit por Subscription Key
 
 Exemplo de uso da policy <rate-limit-by-key> (inbound):
 
