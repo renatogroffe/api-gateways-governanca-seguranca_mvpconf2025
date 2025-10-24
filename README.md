@@ -24,3 +24,32 @@ Exemplo de uso da policy <rate-limit-by-key> (inbound):
     </on-error>
 </policies>
 ```
+
+---
+
+## Cache por Subscription Key
+
+```yaml
+<policies>
+    <!-- Throttle, authorize, validate, cache, or transform the requests -->
+    <inbound>
+        <base />
+        <cache-lookup vary-by-developer="false" vary-by-developer-groups="false" downstream-caching-type="none">
+            <vary-by-header>Ocp-Apim-Subscription-Key</vary-by-header>
+        </cache-lookup>
+    </inbound>
+    <!-- Control if and how the requests are forwarded to services  -->
+    <backend>
+        <base />
+    </backend>
+    <!-- Customize the responses -->
+    <outbound>
+        <base />
+        <cache-store duration="10" cache-response="true" />
+    </outbound>
+    <!-- Handle exceptions and customize error responses  -->
+    <on-error>
+        <base />
+    </on-error>
+</policies>
+```
