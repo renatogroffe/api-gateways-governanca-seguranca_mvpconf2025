@@ -67,3 +67,31 @@ Tokens JWT com Microsoft Entra ID
         </validate-azure-ad-token>
     </inbound>
 ```
+
+---
+
+Subscription Key com MCP Server
+
+```yaml
+<policies>
+	<!-- Throttle, authorize, validate, cache, or transform the requests -->
+	<inbound>
+		<base />
+		<check-header name="Ocp-Apim-Subscription-Key" failed-check-httpcode="401" failed-check-error-message="Subscription key faltando ou invalida.">
+			<value>subscription_key</value>
+		</check-header>
+	</inbound>
+	<!-- Control if and how the requests are forwarded to services  -->
+	<backend>
+		<base />
+	</backend>
+	<!-- Customize the responses -->
+	<outbound>
+		<base />
+	</outbound>
+	<!-- Handle exceptions and customize error responses  -->
+	<on-error>
+		<base />
+	</on-error>
+</policies>
+```
