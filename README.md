@@ -55,7 +55,7 @@ Exemplo de uso da policy <rate-limit-by-key> (inbound):
 ```
 ---
 
-Tokens JWT com Microsoft Entra ID
+## Tokens JWT com Microsoft Entra ID
 
 ```yaml
     <inbound>
@@ -70,7 +70,7 @@ Tokens JWT com Microsoft Entra ID
 
 ---
 
-Subscription Key com MCP Server
+## Subscription Key com MCP Server
 
 ```yaml
 <policies>
