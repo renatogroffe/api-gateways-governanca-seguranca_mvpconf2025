@@ -53,3 +53,17 @@ Exemplo de uso da policy <rate-limit-by-key> (inbound):
     </on-error>
 </policies>
 ```
+---
+
+Tokens JWT com Microsoft Entra ID
+
+```yaml
+    <inbound>
+        <base />
+        <validate-azure-ad-token tenant-id="id_tenant_microsofentraid">
+            <client-application-ids>
+                <application-id>id_appregistration</application-id>
+            </client-application-ids>
+        </validate-azure-ad-token>
+    </inbound>
+```
