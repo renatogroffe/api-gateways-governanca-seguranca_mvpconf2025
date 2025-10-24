@@ -1,0 +1,2 @@
+GET https://groffeapim01.azure-api.net/apicache/Contador
+Ocp-Apim-Subscription-Key: subscription_key
