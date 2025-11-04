@@ -1,6 +1,8 @@
 # api-gateways-governanca-seguranca_mvpconf2025
 Conteúdos da apresentação "Governança e Segurança em APIs REST: tirando o melhor proveito de APIs Gateways!".
 
+Tópicos: API Gateways, Segurança em APIs, Cloud Computing, DevSecOps, Containers.... 
+ 
 ---
 
 ## Rate Limit por Subscription Key
